@@ -1,10 +1,18 @@
+<span id="title">
+
 # Benchmark name
+
+</span>
 
 [![Page Badge](https://badgen.net/badge/icon/Benchmark?label=Page)](https://benchmark.webots.cloud/run?version=R2022b&url=https://github.com/Jean-Eudes-le-retour/own-pendulum-benchmark/blob/main/worlds/inverted_pendulum.wbt&type=benchmark)
 
 ## Description
 
+<span id="description">
+
 Write here a short description of your benchmark.
+
+</span>
 
 <p style="max-width:75%">
   <img src="./preview/thumbnail.jpg">
@@ -12,10 +20,14 @@ Write here a short description of your benchmark.
 
 ## Information
 
+<span id="information">
+
 - Difficulty: 1 to 5
 - Robot: robot name
 - Language: programming language of controller template
 - Commitment: Amount of time needed to program controller
+
+</span>
 
 Might not keep this section as it holds the same info as information.txt -> needs to manually sync this text with this file.
 
