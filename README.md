@@ -1,19 +1,29 @@
-# Inverted Pendulum Benchmark
+# Benchmark name
 
 [![Page Badge](https://badgen.net/badge/icon/Benchmark?label=Page)](https://benchmark.webots.cloud/run?version=R2022b&url=https://github.com/Jean-Eudes-le-retour/own-pendulum-benchmark/blob/main/worlds/inverted_pendulum.wbt&type=benchmark)
 
 ## Description
-Program an e-puck robot to maintain an inverted pendulum up as long as possible.
+
+Write here a short description of your benchmark.
 
 <p align="center">
   <img src="./preview/thumbnail.jpg">
 </p>
 
 ## Information
-- Difficulty: 3
-- Robot: E-puck
-- Language: Python
-- Commitment: A couple of hours
+
+- Difficulty: 1 to 5
+- Robot: robot name
+- Language: programming language of controller template
+- Commitment: Amount of time needed to program controller
+
+Info from information.txt, shown on webots.cloud. Does it need to be here too? Automatic sync?
+
+## Organizer setup
+
+TODO: add all the steps needed to organize one's own benchmark
+
+
 
 ## How to participate
 
