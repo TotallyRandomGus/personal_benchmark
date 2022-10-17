@@ -21,11 +21,6 @@ Write here a short description of your benchmark.
 
 Here are the instructions for somebody to organise a robotics simulation benchmark.
 
-They are broken down into three different categories:
-- [GitHub settings](#github-settings)
-- [Metadata update](#metadata-update)
-- [Webots files](#webots-files)
-
 ### Github settings
 - [Create a personal repository](../../generate) from this template
 - In the [settings tab](../../settings):
@@ -35,14 +30,14 @@ They are broken down into three different categories:
 
 ### Metadata update
 
-- [Update README](../../edit/main/README.md):
+- Update [README](../../edit/main/README.md):
   - Change the description and the information section to fit the new scenario
   - Replace "ORGANIZER_NAME" in the participation section with your GitHub username
   - Remove the organizer setup section
   - When everything is ready and you have submitted your benchmark to webots.cloud, change the badge link to the correct webots.cloud page
-- Update webots.yml to fit your world file name, default controller name, benchmark metric and maximum duration.
-- Update information.txt for fit your challenge. Used by webots.cloud
-- Update preview folder with example animation of benchmark (use the same file names)
+- Update [webots.yml](../../edit/main/webots.yml) to fit your world file name, default controller name, benchmark metric and maximum duration.
+- Update [information.txt](../../edit/main/information.txt) for fit your challenge. Used by webots.cloud
+- Update [preview folder](../../edit/main/preview) with example animation of benchmark (use the same file names)
 
 ### Webots files
 
