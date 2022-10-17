@@ -48,21 +48,25 @@ If fork (can sync with template but can only be done once per GitHub account!?):
 If create from template (can't sync with template (not easily at least...) but users can make as many versions as they want):
 - Go to the [secrets settings](../../settings/secrets) and create a new secret named "REPO_TOKEN" with a [Personal Access Token](../../../../settings/tokens) with repo scope
 
+### README update
+
+Update [README](../../edit/main/README.md):
+
+- Change the description section to fit the new scenario
+- Update the different fields of the information section:
+  - Title: The title of the benchmark
+  - Description: Same description as this file. Should not have any line breaks.
+  - Difficulty: An idea of the complexity of the challenge (for example: Middle School, High School, Bachelor, Master, PhD...)
+  - Robot: Name of the robot used in the benchmark
+  - Language: Programming language of the example controller
+  - Commitment: Approximation of the time required to complete the challenge (a few minutes, a couple of hours, a couple of days...)
+  - Metric: Should be one of percent, time-speed, time-duration  or distance
+- Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
+- Remove the organizer setup section
+- When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the badge link to the correct webots.cloud page
+
 ### Metadata update
 
-- Update [README](../../edit/main/README.md):
-  - Change the description section to fit the new scenario
-  - Update the different fields of the information section:
-    - Title: The title of the benchmark
-    - Description: Same description as this file. Should not have any line breaks.
-    - Difficulty: An idea of the complexity of the challenge (for example: Middle School, High School, Bachelor, Master, PhD...)
-    - Robot: Name of the robot used in the benchmark
-    - Language: Programming language of the example controller
-    - Commitment: Approximation of the time required to complete the challenge (a few minutes, a couple of hours, a couple of days...)
-    - Metric: Should be one of percent, time-speed, time-duration  or distance
-  - Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
-  - Remove the organizer setup section
-  - When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the badge link to the correct webots.cloud page
 - Update [webots.yml](../../edit/main/webots.yml) to fit your world file name, default controller name, benchmark metric and maximum duration.
 - Replace the files of the [preview folder](/preview) with an example animation of your benchmark (keep the same file names)
 
