@@ -17,32 +17,34 @@ Write here a short description of your benchmark.
 - Language: programming language of controller template
 - Commitment: Amount of time needed to program controller
 
-Info from information.txt, shown on webots.cloud. Does it need to be here too? Automatic sync?
-
 ## Organizer setup
 
-TODO: add all the steps needed to organize one's own benchmark
+Here are the instructions for somebody to organise a robotics simulation benchmark.
+
+They are broken down into three different categories:
+- [GitHub settings](#github-settings)
+- [Metadata update](#metadata-update)
+- [Webots files](#webots-files)
 
 ### Github settings
-- Create personal repo from this template
-- In the settings tab:
-  - In the general section, turn on issues
-  - In the actions section, turn on actions
-  - In the secrets section, create a new secret named "REPO_TOKEN" with a PAT with repo scope
+- [Create a personal repository](../../generate) from this template
+- In the [settings tab](../../settings):
+  - In the general section, under the "Features" turn on the issues
+  - In the [actions](../../settings/actions) section, allow actions
+  - In the [secrets](../../settings/secrets) section, create a new secret named "REPO_TOKEN" with a [Personal Access Token](../../../../settings/tokens) with repo scope
 
 ### Metadata update
 
-- Update README:
+- [Update README](../../edit/main/README.md):
   - Change the description and the information section to fit the new scenario
   - Replace "ORGANIZER_NAME" in the participation section with your GitHub username
   - Remove the organizer setup section
   - When everything is ready and you have submitted your benchmark to webots.cloud, change the badge link to the correct webots.cloud page
-- Update webots.yml to fit your world file name, controller name for Theia, benchmark metric and maximum duration.
+- Update webots.yml to fit your world file name, default controller name, benchmark metric and maximum duration.
 - Update information.txt for fit your challenge. Used by webots.cloud
 - Update preview folder with example animation of benchmark (use the same file names)
-- Update the environment variable of the default controller name. Maybe able to fetch it from webots.yml file?
 
-### Webots file
+### Webots files
 
 Replace/add all the files needed for your Webots simulation at the root of the repository, notably the folders "worlds", "controllers" and "plugins" for the robot window.
 
