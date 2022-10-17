@@ -32,16 +32,16 @@ Here are the instructions for somebody to organise a robotics simulation benchma
 
 - Update [README](../../edit/main/README.md):
   - Change the description and the information section to fit the new scenario
-  - Replace "ORGANIZER_NAME" in the participation section with your GitHub username
+  - Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
   - Remove the organizer setup section
-  - When everything is ready and you have submitted your benchmark to webots.cloud, change the badge link to the correct webots.cloud page
+  - When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the badge link to the correct webots.cloud page
 - Update [webots.yml](../../edit/main/webots.yml) to fit your world file name, default controller name, benchmark metric and maximum duration.
 - Update [information.txt](../../edit/main/information.txt) for fit your challenge. Used by webots.cloud
-- Update [preview folder](../../edit/main/preview) with example animation of benchmark (use the same file names)
+- Replace the files of the [preview folder](/preview) with an example animation of your benchmark (keep the same file names)
 
 ### Webots files
 
-Replace/add all the files needed for your Webots simulation at the root of the repository, notably the folders "worlds", "controllers" and "plugins" for the robot window.
+Replace/add all the files needed for your Webots simulation at the root of the repository, notably the folders "worlds", "controllers" and the folder "plugins" needed for the robot window.
 
 ## How to participate
 
