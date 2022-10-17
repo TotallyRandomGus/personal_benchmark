@@ -6,7 +6,7 @@
 
 Write here a short description of your benchmark.
 
-<p align="center">
+<p style="max-width:75%">
   <img src="./preview/thumbnail.jpg">
 </p>
 
@@ -17,9 +17,11 @@ Write here a short description of your benchmark.
 - Language: programming language of controller template
 - Commitment: Amount of time needed to program controller
 
+Might not keep this section as it holds the same info as information.txt -> needs to manually sync this text with this file.
+
 ## Organizer setup
 
-Here are the instructions for somebody to organise a robotics simulation benchmark.
+Here is a summary of the instructions for somebody who wants to organise a robotics simulation benchmark:
 
 ### Github settings
 - [Create a personal repository](../../generate) from this template
@@ -41,17 +43,25 @@ If create from template (can't sync with template (not easily at least...) but u
   - Remove the organizer setup section
   - When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the badge link to the correct webots.cloud page
 - Update [webots.yml](../../edit/main/webots.yml) to fit your world file name, default controller name, benchmark metric and maximum duration.
-- Update [information.txt](../../edit/main/information.txt) for fit your challenge. Used by webots.cloud
 - Replace the files of the [preview folder](/preview) with an example animation of your benchmark (keep the same file names)
+- Update the [information.txt](../../edit/main/information.txt) file that is used by the webots.cloud website to generate the benchmark page by adapting the different fields:
+  - Title: The title of the benchmark
+  - Description: Same description as this file. Should not have any line breaks.
+  - Difficulty: An idea of the complexity of the challenge (for example: Middle School, High School, Bachelor, Master, PhD...)
+  - Robot: Name of the robot used in the benchmark
+  - Language: Programming language of the example controller
+  - Commitment: Approximation of the time required to complete the challenge (a few minutes, a couple of hours, a couple of days...)
+  - Metric: Should be one of percent, time-speed, time-duration  or distance
 
 ### Webots files
 
 Replace/add all the files needed for your Webots simulation at the root of the repository, notably the folders "worlds", "controllers" and the folder "plugins" needed for the robot window.
 
-<details>
-<summary>
-### Detailed step-by-step guide
-</summary>
+<!-- <details>
+<summary style="font-size:1.25em">Detailed step-by-step guide</summary>
+
+TODO: Detailed step-by-step guide if needed
+-->
 
 TODO: More in depth guide needed?
 </details>
