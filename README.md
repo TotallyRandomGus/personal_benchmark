@@ -23,7 +23,28 @@ Info from information.txt, shown on webots.cloud. Does it need to be here too? A
 
 TODO: add all the steps needed to organize one's own benchmark
 
+### Github settings
+- Create personal repo from this template
+- In the settings tab:
+  - In the general section, turn on issues
+  - In the actions section, turn on actions
+  - In the secrets section, create a new secret named "REPO_TOKEN" with a PAT with repo scope
 
+### Metadata update
+
+- Update README:
+  - Change the description and the information section to fit the new scenario
+  - Replace "ORGANIZER_NAME" in the participation section with your GitHub username
+  - Remove the organizer setup section
+  - When everything is ready and you have submitted your benchmark to webots.cloud, change the badge link to the correct webots.cloud page
+- Update webots.yml to fit your world file name, controller name for Theia, benchmark metric and maximum duration.
+- Update information.txt for fit your challenge. Used by webots.cloud
+- Update preview folder with example animation of benchmark (use the same file names)
+- Update the environment variable of the default controller name. Maybe able to fetch it from webots.yml file?
+
+### Webots file
+
+Replace/add all the files needed for your Webots simulation at the root of the repository, notably the folders "worlds", "controllers" and "plugins" for the robot window.
 
 ## How to participate
 
@@ -43,7 +64,7 @@ Under "Access" click on the "Collaborators" section.
 You will then need to confirm the access by re-entering your GitHub password.
 
 When this is done you should see a "Manage access" box where you will see the current collaborators of the repo.
-Click on the "Add people" and search for "Jean-Eudes-le-retour". When you found the organizer, add them to the repository.
+Click on the "Add people" and search for "ORGANIZER_NAME". When you found the organizer, add them to the repository.
 
 ### Submit your entry by using posting an issue using the provided template
 
