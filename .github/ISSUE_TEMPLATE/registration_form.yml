@@ -1,0 +1,15 @@
+name: Registration to benchmark
+description: Register to the benchmark by raising an issue! 
+labels: [registration]
+
+title: "Registration to benchmark"
+
+body:
+- type: input
+  id: repo_link
+  attributes:
+    label: GitHub repository URL
+    description: Paste here your GitHub repository URL
+    placeholder: https://github.com/USERNAME/REPOSITORY_NAME
+  validations:
+    required: true
