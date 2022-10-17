@@ -1,7 +1,7 @@
-Title: Inverted Pendulum
-Description: Program an e-puck robot to maintain an inverted pendulum up as long as possible.
-Difficulty: 3
-Robot: E-puck
+Title: Robot Programming
+Description: Learn how to program a robot, save your controller program, revert and run the simulation.
+Difficulty: 1
+Robot: Thymio2
 Language: Python
-Commitment: 3
-Metric: time-duration
+Commitment: 1
+Metric: percent
