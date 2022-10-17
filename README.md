@@ -23,10 +23,15 @@ Here are the instructions for somebody to organise a robotics simulation benchma
 
 ### Github settings
 - [Create a personal repository](../../generate) from this template
+
+If fork (can sync with template but can only be done once per GitHub account!?):
+- In the [actions tab](../../actions), enable workflows
 - In the [settings tab](../../settings):
   - In the general section, under the "Features" turn on the issues
-  - In the [actions](../../settings/actions) section, allow actions
   - In the [secrets](../../settings/secrets) section, create a new secret named "REPO_TOKEN" with a [Personal Access Token](../../../../settings/tokens) with repo scope
+
+If create from template (can't sync with template (not easily at least...) but users can make as many versions as they want):
+- Go to the [secrets settings](../../settings/secrets) and create a new secret named "REPO_TOKEN" with a [Personal Access Token](../../../../settings/tokens) with repo scope
 
 ### Metadata update
 
@@ -42,6 +47,14 @@ Here are the instructions for somebody to organise a robotics simulation benchma
 ### Webots files
 
 Replace/add all the files needed for your Webots simulation at the root of the repository, notably the folders "worlds", "controllers" and the folder "plugins" needed for the robot window.
+
+<details>
+<summary>
+### Detailed step-by-step guide
+</summary>
+
+TODO: More in depth guide needed?
+</details>
 
 ## How to participate
 
