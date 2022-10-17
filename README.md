@@ -26,6 +26,7 @@ Write here a short description of your benchmark.
 - Robot: robot name
 - Language: programming language of controller template
 - Commitment: Amount of time needed to program controller
+- Metric: percent
 
 </span>
 
