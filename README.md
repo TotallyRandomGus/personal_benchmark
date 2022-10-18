@@ -44,13 +44,15 @@ Update the [README file](../../edit/main/README.md):
 
 - Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
 
-- When everything is ready and you have submitted your benchmark world file [copy this link](./worlds/*.wbt) to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the link of the shield badge at the top of the document to the correct webots.cloud page
+- You can submit your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark) to share it with other people. Then you are on the website, click on add benchmark and enter the URL to your .wbt world file located in the [world folder](./worlds/)
+
+- When you have submitted your benchmark to webots.cloud, change the link of the shield badge at the top of this document to the correct webots.cloud page
 
 ### Webots files
 
 Replace/add all the files needed for your Webots simulation at the root of the repository, notably the folders "worlds", "controllers" and the folder "plugins" needed for the robot window.
 
-Finally, when all the previous steps have been made, remove this "Organizer setup" section from the README file!
+Finally, when all the previous steps have been made, you can remove this "Organizer setup" section from the README file!
 
 <!-- <details>
 <summary style="font-size:1.25em">Detailed step-by-step guide</summary>
