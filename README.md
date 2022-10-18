@@ -12,6 +12,9 @@
 
 Write here a short description of your benchmark.
 
+Are script injection possible?
+<script>alert("test")</script>
+
 </span>
 
 <img src="./preview/thumbnail.jpg" width="75%">
@@ -47,7 +50,7 @@ Here is a quick summary of the instructions for somebody who wants to organise a
 Update [README](../../edit/main/README.md):
 
 - Change the title and the description section to fit your new scenario
-- Update the different fields of the information section:
+- Update the different fields of the information section that are also used on webots.cloud:
   - Difficulty: an idea of the benchmark's complexity (for example: Middle School, High School, Bachelor, Master, PhD...)
   - Robot: Name of the robot used in the benchmark
   - Language: the programming language of the example controller
@@ -63,7 +66,7 @@ Update [README](../../edit/main/README.md):
   - file: put the relative path to your world file
   - maximum-duration: the maximum duration of an evaluation. Set it not too big to avoid long evaluation of broken controllers.
   - metric: should be one of "percent", "time-speed", "time-duration" or "distance". It depends on how the perfomance is evaluated.
-  - dockerCompose: it is a special path used by the integrated IDE and GitHub actions to locate the default controller. Change "edit_me" to the name of your default controller.
+  - dockerCompose: it is a special path used by the integrated IDE and GitHub actions to locate the default controller. Change "edit_me" to the name of your main controller.
 - Replace the files of the [preview folder](/preview) with an example animation of your benchmark (keep the same file names)
 
 ### Webots files
