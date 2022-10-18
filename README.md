@@ -25,9 +25,9 @@ Then you will need to follow those steps:
 
 - Update the fields inside [webots.yml](../../edit/main/webots.yml):
   - file: put the relative path to your world file
-  - maximum-duration: the maximum duration of an evaluation in seconds. Set it not large to avoid long evaluations of broken controllers.
-  - metric: should be one of "percent", "time-speed", "time-duration" or "distance". It depends on how the perfomance is evaluated.
-  - dockerCompose: it is a special path used by the integrated IDE and GitHub actions to locate the default controller. Change "edit_me" to the name of your main controller.
+  - maximum-duration: the maximum duration of an evaluation in seconds. Set it not large to avoid long evaluations of broken controllers but not too short to have enough time to finish the task
+  - metric: should be one of "percent", "time-speed", "time-duration" or "distance". It depends on how the perfomance is evaluated
+  - dockerCompose: it is a special path used by the integrated IDE and GitHub actions to locate the default controller. Change "edit_me" to the name of your main controller
 - Replace the files of the [preview folder](/preview) with an example animation of your benchmark (keep the same file names)
 
 ### README update
