@@ -15,9 +15,9 @@ Then you will need to follow those steps:
 ### GitHub settings
 - Go to the [Settings tab](../../settings):
   - Tick the "Template repository" box so that the competitors can easily make a copy of the simulation files
-  - Go to [Actions settings tab](../../settings/actions) and tick the "Allow all actions and reusable workflow" permission to enable automation and save the setting
+  - Go to [Actions settings tab](../../settings/actions) and tick the "Allow all actions and reusable workflow" permission to enable the automation scripts and save the setting
 
-- You need to setup a GitHub secret to be able to fetch your competitors' controllers:
+- You will need to setup a GitHub secret to be able to fetch your competitors' controllers:
 
   - [Create a new Personal Access Token](../../../../settings/tokens/new). Give it a name to remember what it is for and set its "Expiration" to the end of the tournament. You can always set it to "No expiration" or recreate a token when it expires to allow the automated scripts to continue working. Tick the "repo" scope box, click "Generate token" and copy the generated code to your clipboard
 
@@ -40,7 +40,7 @@ Update the [README file](../../edit/main/README.md):
 
 - Update the different fields of the information section. They are used for the info box on webots.cloud:
   - Difficulty: an idea of the benchmark's complexity (for example: Middle School, High School, Bachelor, Master, PhD...)
-  - Robot: Name of the robot used in the benchmark
+  - Robot: the name of the robot used in the benchmark
   - Language: the programming language of the example controller
   - Commitment: an idea of the time required to complete the benchmark (a few minutes, a couple of hours, a couple of days...)
 
