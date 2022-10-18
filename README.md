@@ -12,9 +12,6 @@
 
 Write here a short description of your benchmark.
 
-Are script injection possible?
-<script>alert("test")</script>
-
 </span>
 
 <img src="./preview/thumbnail.jpg" width="75%">
@@ -58,13 +55,13 @@ Update [README](../../edit/main/README.md):
 
 - Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
 - Remove the organizer setup section
-- When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the badge link to the correct webots.cloud page
+- When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the link of the shield badge at the top of the document to the correct webots.cloud page
 
 ### Metadata update
 
 - Update the fields inside [webots.yml](../../edit/main/webots.yml):
   - file: put the relative path to your world file
-  - maximum-duration: the maximum duration of an evaluation. Set it not too big to avoid long evaluation of broken controllers.
+  - maximum-duration: the maximum duration of an evaluation in seconds. Set it not large to avoid long evaluations of broken controllers.
   - metric: should be one of "percent", "time-speed", "time-duration" or "distance". It depends on how the perfomance is evaluated.
   - dockerCompose: it is a special path used by the integrated IDE and GitHub actions to locate the default controller. Change "edit_me" to the name of your main controller.
 - Replace the files of the [preview folder](/preview) with an example animation of your benchmark (keep the same file names)
