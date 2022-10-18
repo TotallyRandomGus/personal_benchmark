@@ -24,7 +24,6 @@ Write here a short description of your benchmark.
 - Robot: robot name
 - Language: programming language of controller template
 - Commitment: amount of time needed to program controller
-- Metric: percent
 
 </span>
 
@@ -47,20 +46,24 @@ Here is a quick summary of the instructions for somebody who wants to organise a
 
 Update [README](../../edit/main/README.md):
 
-- Change the title and the description section to fit the new scenario
+- Change the title and the description section to fit your new scenario
 - Update the different fields of the information section:
-  - Difficulty: An idea of the benchmark's complexity (for example: Middle School, High School, Bachelor, Master, PhD...)
+  - Difficulty: an idea of the benchmark's complexity (for example: Middle School, High School, Bachelor, Master, PhD...)
   - Robot: Name of the robot used in the benchmark
-  - Language: Programming language of the example controller
-  - Commitment: An idea of the time required to complete the challenge (a few minutes, a couple of hours, a couple of days...)
-  - Metric: Should be one of percent, time-speed, time-duration  or distance depending on how the benchmark is evaluated
+  - Language: the programming language of the example controller
+  - Commitment: an idea of the time required to complete the benchmark (a few minutes, a couple of hours, a couple of days...)
+
 - Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
 - Remove the organizer setup section
 - When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the badge link to the correct webots.cloud page
 
 ### Metadata update
 
-- Update [webots.yml](../../edit/main/webots.yml) to fit your world file name, default controller name, benchmark metric and maximum duration.
+- Update the fields inside [webots.yml](../../edit/main/webots.yml):
+  - file: put the relative path to your world file
+  - maximum-duration: the maximum duration of an evaluation. Set it not too big to avoid long evaluation of broken controllers.
+  - metric: should be one of "percent", "time-speed", "time-duration" or "distance". It depends on how the perfomance is evaluated.
+  - dockerCompose: it is a special path used by the integrated IDE and GitHub actions to locate the default controller. Change "edit_me" to the name of your default controller.
 - Replace the files of the [preview folder](/preview) with an example animation of your benchmark (keep the same file names)
 
 ### Webots files
