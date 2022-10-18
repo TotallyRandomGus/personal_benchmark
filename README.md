@@ -8,31 +8,18 @@
 
 ## Organizer setup
 
-Here is a quick summary of the instructions for somebody who wants to organise a robotics simulation benchmark:
+Here is a quick summary of the instructions for somebody who wants to organise a robotics simulation benchmark. The links in the rest of the setup are relative to the repository where the README is, so to be able to use them you should first [create your own repository](../../generate) from this template and go to its main page.
+
+Then you will need to follow those steps:
 
 ### GitHub settings
-- [Create your own repository](../../generate) from this template
-
 - In the [settings tab](../../settings), tick the "Template repository" box.
 
-- You need to setup a secret to be able to fetch your competitors' controllers:
-  - [Create a new Personal Access Token](../../../../settings/tokens/new). Give it a name to remember what it is for and set the "Expiration" to the duration of the tournament. You can always set it to "No expiration" or recreate a token when it expires. Tick the "repo" scope box, click "Generate token" and copy the generated code
-  - Then go to the repo's [secrets settings](../../settings/secrets/actions/new) to create a new repository secret. Name it "REPO_TOKEN", paste in the Personal Access Token you just created and finally click the "Add secret" button.
+- You need to setup a GitHub secret to be able to fetch your competitors' controllers:
 
-### README update
+  - [Create a new Personal Access Token](../../../../settings/tokens/new). Give it a name to remember what it is for and set the "Expiration" to the end of the tournament. You can always set it to "No expiration" or recreate a token when it expires. Tick the "repo" scope box, click "Generate token" and copy the generated code to your clipboard
 
-Update [README](../../edit/main/README.md):
-
-- Remove the organizer setup section
-- Change the title and the description section to fit your new scenario
-- Update the different fields of the information section that are also used on webots.cloud:
-  - Difficulty: an idea of the benchmark's complexity (for example: Middle School, High School, Bachelor, Master, PhD...)
-  - Robot: Name of the robot used in the benchmark
-  - Language: the programming language of the example controller
-  - Commitment: an idea of the time required to complete the benchmark (a few minutes, a couple of hours, a couple of days...)
-
-- Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
-- When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the link of the shield badge at the top of the document to the correct webots.cloud page
+  - Go to the repo's [secrets settings](../../settings/secrets/actions/new) to create a new repository secret. Name it "REPO_TOKEN", paste in the Personal Access Token you just created and finally click the "Add secret" button.
 
 ### Metadata update
 
@@ -43,14 +30,33 @@ Update [README](../../edit/main/README.md):
   - dockerCompose: it is a special path used by the integrated IDE and GitHub actions to locate the default controller. Change "edit_me" to the name of your main controller.
 - Replace the files of the [preview folder](/preview) with an example animation of your benchmark (keep the same file names)
 
+### README update
+
+Update the [README file](../../edit/main/README.md):
+
+- Change the title and the description section to fit your new scenario
+
+- Update the different fields of the information section that are also used on webots.cloud:
+  - Difficulty: an idea of the benchmark's complexity (for example: Middle School, High School, Bachelor, Master, PhD...)
+  - Robot: Name of the robot used in the benchmark
+  - Language: the programming language of the example controller
+  - Commitment: an idea of the time required to complete the benchmark (a few minutes, a couple of hours, a couple of days...)
+
+- Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
+
+- When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the link of the shield badge at the top of the document to the correct webots.cloud page
+
 ### Webots files
 
 Replace/add all the files needed for your Webots simulation at the root of the repository, notably the folders "worlds", "controllers" and the folder "plugins" needed for the robot window.
+
+Finally, when all the previous steps have been made, remove this "Organizer setup" section from the README file!
 
 <!-- <details>
 <summary style="font-size:1.25em">Detailed step-by-step guide</summary>
 
 TODO: Detailed step-by-step guide if needed
+ could be done in the wiki of the repo?
 
 </details>
 -->
