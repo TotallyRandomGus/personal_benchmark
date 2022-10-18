@@ -8,16 +8,16 @@
 
 ## Organizer setup
 
-Here is a quick summary of the instructions for somebody who wants to organise a robotics simulation benchmark. The links in the rest of the setup are relative to the repository where the README is, so to be able to use them you should first [create your own repository](../../generate) from this template and go to its main page.
+Here is a quick summary of the instructions for somebody who wants to organise a robotics simulation benchmark. The links in the rest of the setup are relative to the repository where the README is, so to be able to use them you should first [create your own repository](../../generate) from this template and go to its main page to continue reading the instructions.
 
 Then you will need to follow those steps:
 
 ### GitHub settings
-- In the [settings tab](../../settings), tick the "Template repository" box.
+- In the [settings tab](../../settings), tick the "Template repository" box so that the competitors can easily make a copy of the simulation files.
 
 - You need to setup a GitHub secret to be able to fetch your competitors' controllers:
 
-  - [Create a new Personal Access Token](../../../../settings/tokens/new). Give it a name to remember what it is for and set the "Expiration" to the end of the tournament. You can always set it to "No expiration" or recreate a token when it expires. Tick the "repo" scope box, click "Generate token" and copy the generated code to your clipboard
+  - [Create a new Personal Access Token](../../../../settings/tokens/new). Give it a name to remember what it is for and set its "Expiration" to the end of the tournament. You can always set it to "No expiration" or recreate a token when it expires to allow the automated scripts to continue working. Tick the "repo" scope box, click "Generate token" and copy the generated code to your clipboard
 
   - Go to the repo's [secrets settings](../../settings/secrets/actions/new) to create a new repository secret. Name it "REPO_TOKEN", paste in the Personal Access Token you just created and finally click the "Add secret" button.
 
@@ -36,7 +36,7 @@ Update the [README file](../../edit/main/README.md):
 
 - Change the title and the description section to fit your new scenario
 
-- Update the different fields of the information section that are also used on webots.cloud:
+- Update the different fields of the information section. They are used for the info box on webots.cloud:
   - Difficulty: an idea of the benchmark's complexity (for example: Middle School, High School, Bachelor, Master, PhD...)
   - Robot: Name of the robot used in the benchmark
   - Language: the programming language of the example controller
@@ -44,7 +44,7 @@ Update the [README file](../../edit/main/README.md):
 
 - Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
 
-- You can submit your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark) to share it with other people. Then you are on the website, click on add benchmark and enter the URL to your .wbt world file located in the [world folder](./worlds/)
+- You can submit your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark) to share it with other people. Then you are on the website on the "Benchmark" tab, click on "Add a new benchmark" and enter the URL to your .wbt world file located in the [world folder](./worlds/)
 
 - When you have submitted your benchmark to webots.cloud, change the link of the shield badge at the top of this document to the correct webots.cloud page
 
