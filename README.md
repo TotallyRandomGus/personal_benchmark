@@ -30,32 +30,29 @@ Write here a short description of your benchmark.
 
 </span>
 
-Might not keep this section as it holds the same info as information.txt -> needs to manually sync this text with this file.
-
 ## Organizer setup
 
-Here is a summary of the instructions for somebody who wants to organise a robotics simulation benchmark:
+Here is a quick summary of the instructions for somebody who wants to organise a robotics simulation benchmark:
 
-### Github settings
+### GitHub settings
 - [Create a personal repository](../../generate) from this template
 
 If fork (can sync with template but can only be done once per GitHub account!?):
 - In the [actions tab](../../actions), enable workflows
 - In the [settings tab](../../settings):
   - In the general section, under the "Features" turn on the issues
-  - In the [secrets](../../settings/secrets) section, create a new secret named "REPO_TOKEN" with a [Personal Access Token](../../../../settings/tokens) with repo scope
+  - In the [secrets](../../settings/secrets) section, create a new secret named "REPO_TOKEN" with a [Personal Access Token](../../../../settings/tokens/new) with "repo" scope
 
 If create from template (can't sync with template (not easily at least...) but users can make as many versions as they want):
-- Go to the [secrets settings](../../settings/secrets) and create a new secret named "REPO_TOKEN" with a [Personal Access Token](../../../../settings/tokens) with repo scope
+- In the [settings tab](../../settings), tick the "Template repository" box.
+- Go to the [secrets settings](../../settings/secrets) and create a new secret named "REPO_TOKEN" with a [Personal Access Token](../../../../settings/tokens/new) with "repo" scope
 
 ### README update
 
 Update [README](../../edit/main/README.md):
 
-- Change the description section to fit the new scenario
+- Change the title and the description section to fit the new scenario
 - Update the different fields of the information section:
-  - Title: The title of the benchmark
-  - Description: Same description as this file. Should not have any line breaks.
   - Difficulty: An idea of the complexity of the challenge (for example: Middle School, High School, Bachelor, Master, PhD...)
   - Robot: Name of the robot used in the benchmark
   - Language: Programming language of the example controller
@@ -78,10 +75,9 @@ Replace/add all the files needed for your Webots simulation at the root of the r
 <summary style="font-size:1.25em">Detailed step-by-step guide</summary>
 
 TODO: Detailed step-by-step guide if needed
--->
 
-TODO: More in depth guide needed?
 </details>
+-->
 
 ## How to participate
 
