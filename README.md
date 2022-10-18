@@ -1,33 +1,10 @@
 <span id="title">
 
-# Benchmark name
+# Benchmark organizer template
 
 </span>
 
 [![webots.cloud - Page](https://img.shields.io/badge/webots.cloud-Page-007ACC)](https://benchmark.webots.cloud/run?version=R2022b&url=https://github.com/Jean-Eudes-le-retour/bare-benchmark-example/blob/main/worlds/robot_programming.wbt&type=benchmark)
-
-## Description
-
-<span id="description">
-
-Write here a short description of your benchmark.
-
-</span>
-
-<img src="./preview/thumbnail.jpg" width="75%">
-
-## Information
-
-<span id="information">
-
-- Difficulty: Middle School, High School, Bachelor, Master or PhD
-- Robot: robot name
-- Language: programming language of controller template
-- Commitment: amount of time needed to program controller
-
-</span>
-
----
 
 ## Organizer setup
 
@@ -46,6 +23,7 @@ Here is a quick summary of the instructions for somebody who wants to organise a
 
 Update [README](../../edit/main/README.md):
 
+- Remove the organizer setup section
 - Change the title and the description section to fit your new scenario
 - Update the different fields of the information section that are also used on webots.cloud:
   - Difficulty: an idea of the benchmark's complexity (for example: Middle School, High School, Bachelor, Master, PhD...)
@@ -54,7 +32,6 @@ Update [README](../../edit/main/README.md):
   - Commitment: an idea of the time required to complete the benchmark (a few minutes, a couple of hours, a couple of days...)
 
 - Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
-- Remove the organizer setup section
 - When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the link of the shield badge at the top of the document to the correct webots.cloud page
 
 ### Metadata update
@@ -77,6 +54,29 @@ TODO: Detailed step-by-step guide if needed
 
 </details>
 -->
+
+---
+
+## Description
+
+<span id="description">
+
+Write here a short description of your benchmark.
+
+</span>
+
+<img src="./preview/thumbnail.jpg" width="75%">
+
+## Information
+
+<span id="information">
+
+- Difficulty: Middle School, High School, Bachelor, Master or PhD
+- Robot: robot name
+- Language: programming language of controller template
+- Commitment: amount of time needed to program controller
+
+</span>
 
 ---
 
