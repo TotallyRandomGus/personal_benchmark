@@ -13,7 +13,9 @@ Here is a quick summary of the instructions for somebody who wants to organise a
 Then you will need to follow those steps:
 
 ### GitHub settings
-- In the [settings tab](../../settings), tick the "Template repository" box so that the competitors can easily make a copy of the simulation files.
+- Go to the [Settings tab](../../settings):
+  - Tick the "Template repository" box so that the competitors can easily make a copy of the simulation files
+  - Go to [Actions settings tab](../../settings/actions) and tick the "Allow all actions and reusable workflow" permission to enable automation and save the setting
 
 - You need to setup a GitHub secret to be able to fetch your competitors' controllers:
 
