@@ -4,7 +4,7 @@
 
 </span>
 
-[![Page Badge](https://badgen.net/badge/icon/Benchmark?label=Page)](https://benchmark.webots.cloud/run?version=R2022b&url=https://github.com/Jean-Eudes-le-retour/own-pendulum-benchmark/blob/main/worlds/inverted_pendulum.wbt&type=benchmark)
+[![webots.cloud - Page](https://img.shields.io/badge/webots.cloud-Page-007ACC)](https://benchmark.webots.cloud/run?version=R2022b&url=https://github.com/Jean-Eudes-le-retour/bare-benchmark-example/blob/main/worlds/robot_programming.wbt&type=benchmark)
 
 ## Description
 
@@ -14,18 +14,16 @@ Write here a short description of your benchmark.
 
 </span>
 
-<p style="max-width:75%">
-  <img src="./preview/thumbnail.jpg">
-</p>
+<img src="./preview/thumbnail.jpg" width="75%">
 
 ## Information
 
 <span id="information">
 
-- Difficulty: 1 to 5
+- Difficulty: Middle School, High School, Bachelor, Master or PhD
 - Robot: robot name
 - Language: programming language of controller template
-- Commitment: Amount of time needed to program controller
+- Commitment: amount of time needed to program controller
 - Metric: percent
 
 </span>
@@ -37,13 +35,13 @@ Write here a short description of your benchmark.
 Here is a quick summary of the instructions for somebody who wants to organise a robotics simulation benchmark:
 
 ### GitHub settings
-- [Create a personal repository](../../generate) from this template
+- [Create your own repository](../../generate) from this template
 
 - In the [settings tab](../../settings), tick the "Template repository" box.
 
 - You need to setup a secret to be able to fetch your competitors' controllers:
   - [Create a new Personal Access Token](../../../../settings/tokens/new). Give it a name to remember what it is for and set the "Expiration" to the duration of the tournament. You can always set it to "No expiration" or recreate a token when it expires. Tick the "repo" scope box, click "Generate token" and copy the generated code
-  - Then go to the repo's [secrets settings](../../settings/secrets) and create a "New repository secret" named "REPO_TOKEN". Paste the Personal Access Token you just created into it and finally click the "Add secret" button.
+  - Then go to the repo's [secrets settings](../../settings/secrets/actions/new) to create a new repository secret. Name it "REPO_TOKEN", paste in the Personal Access Token you just created and finally click the "Add secret" button.
 
 ### README update
 
@@ -51,11 +49,11 @@ Update [README](../../edit/main/README.md):
 
 - Change the title and the description section to fit the new scenario
 - Update the different fields of the information section:
-  - Difficulty: An idea of the complexity of the challenge (for example: Middle School, High School, Bachelor, Master, PhD...)
+  - Difficulty: An idea of the benchmark's complexity (for example: Middle School, High School, Bachelor, Master, PhD...)
   - Robot: Name of the robot used in the benchmark
   - Language: Programming language of the example controller
-  - Commitment: Approximation of the time required to complete the challenge (a few minutes, a couple of hours, a couple of days...)
-  - Metric: Should be one of percent, time-speed, time-duration  or distance
+  - Commitment: An idea of the time required to complete the challenge (a few minutes, a couple of hours, a couple of days...)
+  - Metric: Should be one of percent, time-speed, time-duration  or distance depending on how the benchmark is evaluated
 - Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
 - Remove the organizer setup section
 - When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the badge link to the correct webots.cloud page
