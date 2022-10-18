@@ -44,7 +44,7 @@ Update the [README file](../../edit/main/README.md):
 
 - Replace "ORGANIZER_NAME" in the "How to paricipate" section with your GitHub username
 
-- When everything is ready and you have submitted your benchmark to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the link of the shield badge at the top of the document to the correct webots.cloud page
+- When everything is ready and you have submitted your benchmark world file [copy this link](./worlds/*.wbt) to [webots.cloud](https://benchmark.webots.cloud/benchmark), change the link of the shield badge at the top of the document to the correct webots.cloud page
 
 ### Webots files
 
