@@ -30,6 +30,8 @@ Write here a short description of your benchmark.
 
 </span>
 
+---
+
 ## Organizer setup
 
 Here is a quick summary of the instructions for somebody who wants to organise a robotics simulation benchmark:
@@ -37,15 +39,11 @@ Here is a quick summary of the instructions for somebody who wants to organise a
 ### GitHub settings
 - [Create a personal repository](../../generate) from this template
 
-If fork (can sync with template but can only be done once per GitHub account!?):
-- In the [actions tab](../../actions), enable workflows
-- In the [settings tab](../../settings):
-  - In the general section, under the "Features" turn on the issues
-  - In the [secrets](../../settings/secrets) section, create a new secret named "REPO_TOKEN" with a [Personal Access Token](../../../../settings/tokens/new) with "repo" scope
-
-If create from template (can't sync with template (not easily at least...) but users can make as many versions as they want):
 - In the [settings tab](../../settings), tick the "Template repository" box.
-- Go to the [secrets settings](../../settings/secrets) and create a new secret named "REPO_TOKEN" with a [Personal Access Token](../../../../settings/tokens/new) with "repo" scope
+
+- You need to setup a secret to be able to fetch your competitors' controllers:
+  - [Create a new Personal Access Token](../../../../settings/tokens/new). Give it a name to remember what it is for and set the "Expiration" to the duration of the tournament. You can always set it to "No expiration" or recreate a token when it expires. Tick the "repo" scope box, click "Generate token" and copy the generated code
+  - Then go to the repo's [secrets settings](../../settings/secrets) and create a "New repository secret" named "REPO_TOKEN". Paste the Personal Access Token you just created into it and finally click the "Add secret" button.
 
 ### README update
 
@@ -78,6 +76,8 @@ TODO: Detailed step-by-step guide if needed
 
 </details>
 -->
+
+---
 
 ## How to participate
 
