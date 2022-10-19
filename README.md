@@ -102,7 +102,7 @@ Click on the "Add people" and search for "ORGANIZER_NAME". When you found the or
 ### Submit your entry by using posting an issue using the provided template
 
 - After you added the organizer as a collaborator, go back to the main page of your repository and copy the repository URL from the address bar to your clipboard.
-- Come back to the organizer's page and [click here](../../issues/new?assignees=&labels=registration&template=registration_form.yml&title=Registration+to+benchmark) (on their page) to start your registration. If it doesn't work, you can do it manually by going to the organizer's "Issues" tab, creating a new issue and choosing the "Registration to benchmark" template.
+- Come back to the organizer's page and [click here](../../issues/new?assignees=&labels=registration&template=registration_form.yml&title=Registration+to+benchmark) (on their page) to start your registration. Be sure to register on the organizer page and not on your own repository! If it doesn't work, you can do it manually by going to the organizer's "Issues" tab, creating a new issue and choosing the "Registration to benchmark" template.
 - Paste your repository URL in the URL field and click the "Submit new issue" button.
 
 A series of automated actions will take place in a few seconds. If everything went well, you should get a message saying that you are successfully registered to the benchmark. If there was a problem, read the feedback message to fix what went wrong. When you finished fixing your repository, you can post a "retry" comment on the registration issue to re-run the automated verifications.
