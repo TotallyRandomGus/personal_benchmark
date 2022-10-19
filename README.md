@@ -21,7 +21,7 @@ You will then need to follow those steps:
   - [Create a new Personal Access Token](../../../../settings/tokens/new). Give it a name to remember what it is for and set its "Expiration" to the end of the tournament. You can always set it to "No expiration" or recreate a token when it expires to allow the automated scripts to continue working. Tick the "repo" scope box, click "Generate token" and copy the generated code to your clipboard
   - Go to the repo's [secrets settings](../../settings/secrets/actions/new) to create a new repository secret. Name it "REPO_TOKEN", paste in the Personal Access Token you just created and finally click the "Add secret" button.
 - You will also need to add three custom labels for the automation scripts:
-  - Go to the [generate labels action](../../actions/workflows/generate_labels.yml) page under the Actions tab. Click on "Run workflow" to create the needed labels.
+  - Go to the [Generate new labels action](../../actions/workflows/generate_labels.yml) page under the Actions tab. Click on "Run workflow" to create the needed labels.
 
 ### Metadata update
 
@@ -94,26 +94,24 @@ Finally, click on the green "Create repository from template".
 
 You should now be on your own repository page. The URL should look like this: "https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME".  If it is not the case, go to your repositories and click on the first one from the list.
 
-You will now be able to follow the next few instructions by using the blue links to the setup easier.
-
-- [Click here](../../settings/access) to go to the "Collaborators" settings page or do it manually by clicking on settings and then "Collaborators"
-  - You will then need to confirm the access by re-entering your GitHub password.
+- Click on the "Settings" tab and then under the Access section click on "Collaborators"
+  - You might need to confirm the access by re-entering your GitHub password.
 - When this is done you should see a "Manage access" box where you will see the current collaborators of the repo.
 Click on the "Add people" and search for "ORGANIZER_NAME". When you found the organizer, add them to the repository.
 
 ### Submit your entry by using posting an issue using the provided template
 
-- After you added the organizer as a collaborator, go back to the [main page](./) of your repository and copy your repository URL to your clipboard.
+- After you added the organizer as a collaborator, go back to the main page of your repository and copy the repository URL from the address bar to your clipboard.
 - Come back to the organizer's page and [click here](../../issues/new?assignees=&labels=registration&template=registration_form.yml&title=Registration+to+benchmark) (on their page) to start your registration. If it doesn't work, you can do it manually by going to the organizer's "Issues" tab, creating a new issue and choosing the "Registration to benchmark" template.
 - Paste your repository URL in the URL field and click the "Submit new issue" button.
 
-A series of automated actions will take place. If everything went well, you should get a message saying that you are successfully registered to the benchmark.
+A series of automated actions will take place in a few seconds. If everything went well, you should get a message saying that you are successfully registered to the benchmark. If there was a problem, read the feedback message to fix what went wrong. When you finished fixing your repository, you can post a "retry" comment on the registration issue to re-run the automated verifications.
 
 ### Modify the template controller and/or create your own one
 
-Everything should be good to go, you can modify the files in the controllers folder.
+Everything should be good to go, you can modify the main controller files in the controllers folder.
 
-The supervisor controller is a special controller that is used to evaluate your controller's performance.
+The supervisor controller is the special controller that is used to evaluate your controller's performance.
 
 Webots supports multiple programming languages, see the [Webots documentation](https://www.cyberbotics.com/doc/guide/language-setup) if you are interested.
 Be sure to name your main controller like the default controller (except for the file extension) for it to be used in the leaderboard evaluation.

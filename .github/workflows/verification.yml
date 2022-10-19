@@ -101,7 +101,7 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            There doesn't seem to be a controller in your repository.
+            We could not find the controller files in your repository.
             Please name your main controller with the default name "${{ env.DEFAULT_CONTROLLER }}"
 
 # If there was any problem:
