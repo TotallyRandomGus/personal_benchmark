@@ -9,6 +9,9 @@ target = 0
 # Get pointer to the robot.
 robot = Robot()
 
+# Get the time step of the current world.
+timestep = int(robot.getBasicTimeStep())
+
 # Print the program output on the console
 print("Move the motors of the Thymio II to position " + str(target) + ".")
 
