@@ -4,7 +4,7 @@ from controller import Robot
 import sys
 
 # Define the target motor position in radians.
-target = 0
+target = 2
 
 # Get pointer to the robot.
 robot = Robot()
@@ -15,3 +15,6 @@ print("Move the motors of the Thymio II to position " + str(target) + ".")
 # Set the target position of the left and right wheels motors.
 robot.getDevice("motor.left").setPosition(target)
 robot.getDevice("motor.right").setPosition(target)
+
+while robot.step(timestep) != -1:
+    pass
