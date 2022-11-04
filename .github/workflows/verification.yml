@@ -20,7 +20,7 @@ jobs:
       GH_TOKEN: ${{ secrets.REPO_TOKEN }}
     steps:
       - name: Verification started message
-        uses: peter-evans/create-or-update-comment@v2.0.0
+        uses: peter-evans/create-or-update-comment@v2.1.0
         with:
           issue-number: ${{ github.event.issue.number }}
           body: Verification started...
@@ -63,7 +63,7 @@ jobs:
       - name: If no invites, problem with collab or link syntax
 
         if: ${{ steps.invites_check.outcome == 'failure' }}
-        uses: peter-evans/create-or-update-comment@v2.0.0
+        uses: peter-evans/create-or-update-comment@v2.1.0
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
@@ -85,39 +85,12 @@ jobs:
       - name: If not a benchmark repo, feedback on registration issue
 
         if: ${{ steps.benchmark_check.outcome == 'failure' }}
-        uses: peter-evans/create-or-update-comment@v2.0.0
+        uses: peter-evans/create-or-update-comment@v2.1.0
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
             There was a problem when checking your repository link.
             It doesn't seem to be a benchmark repository.
-
-# Third check | id: controller_check
-
-      - name: Fetch default controller name
-
-        run: bash .github/default_controller_name_regex.sh
-        continue-on-error: true
-
-      - name: Does repo have a correctly named controller?
-
-        if: ${{ steps.benchmark_check.outcome == 'success' }}
-        id: controller_check
-        run: |
-          svn export "https://github.com/$USER_REPO/trunk/controllers/$DEFAULT_CONTROLLER" --force \
-            --username 'example@example.com' --password ${{ secrets.REPO_TOKEN }} --quiet --non-interactive
-          ls "$DEFAULT_CONTROLLER/$DEFAULT_CONTROLLER"* -U
-        continue-on-error: true
-
-      - name: If no controller found, feedback on registration issue
-
-        if: ${{ steps.controller_check.outcome == 'failure' }}
-        uses: peter-evans/create-or-update-comment@v2.0.0
-        with:
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            We could not find the controller files in your repository.
-            Please name your main controller with the default name "${{ env.DEFAULT_CONTROLLER }}"
 
 # If there was any problem:
 
@@ -126,8 +99,7 @@ jobs:
         id: if_error
         if: >
           steps.invites_check.outcome == 'failure' ||
-          steps.benchmark_check.outcome == 'failure' ||
-          steps.controller_check.outcome == 'failure'
+          steps.benchmark_check.outcome == 'failure'
         run: |
           gh api --silent \
             --method POST \
@@ -138,7 +110,7 @@ jobs:
       - name: Prompt on how to retry
 
         if: ${{ steps.if_error.outcome == 'success' }}
-        uses: peter-evans/create-or-update-comment@v2.0.0
+        uses: peter-evans/create-or-update-comment@v2.1.0
         with:
           issue-number: ${{ github.event.issue.number }}
           body: >
@@ -149,7 +121,7 @@ jobs:
 
       - name: Everything is in order, add feedback label
 
-        if: ${{ steps.controller_check.outcome == 'success' }}
+        if: ${{ steps.benchmark_check.outcome == 'success' }}
         run: |
           gh api --silent \
             --method POST \
@@ -164,12 +136,12 @@ jobs:
 
       - name: Add competitor to file
 
-        if: ${{ steps.controller_check.outcome == 'success' }}
+        if: ${{ steps.benchmark_check.outcome == 'success' }}
         run: echo "${{ github.event.issue.number }}:$USER_REPO" >> competitors.txt
 
       - name: Push competitor list update
 
-        if: ${{ steps.controller_check.outcome == 'success' }}      
+        if: ${{ steps.benchmark_check.outcome == 'success' }}      
         run: |
           git config --global user.name '${{ github.repository_owner }}'
           git config --global user.email '${{ github.repository_owner }}@users.noreply.github.com'
@@ -179,15 +151,16 @@ jobs:
 
       - name: Final feedback message
         uses: peter-evans/close-issue@v1
-        if: ${{ steps.controller_check.outcome == 'success' }}
+        if: ${{ steps.benchmark_check.outcome == 'success' }}
         with:
           comment: |
             #### Here comes a new challenger!
             You have been added to the benchmark leaderboard.
 
-            Your ranking is going to be updated at regular intervals.
+            Please note that your leaderboard score is **not** automatically updated.
+            If you want to test the last version of your controller that is in your repo's main branch,
+            add a new comment below containing the word "**run**".
 
-            If you want us to re-evaluate your controller immediately, add a new comment below containing the word "run".
-            If you want to unsubscribe your repository from the list, add a new comment below containing the word "unsubscribe".
+            If you want to unsubscribe your repository from the list, add a new comment below containing the word "**unsubscribe**".
 
             Please note that the commands might take a few minutes before posting feedback messages. You can refresh the page to make recent comments appear.

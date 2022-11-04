@@ -9,9 +9,6 @@ target = 11
 # Get pointer to the robot.
 robot = Robot()
 
-# Get the time step of the current world.
-timestep = int(robot.getBasicTimeStep())
-
 # Print the program output on the console
 print("Move the motors of the Thymio II to position " + str(target) + ".")
 
@@ -19,5 +16,8 @@ print("Move the motors of the Thymio II to position " + str(target) + ".")
 robot.getDevice("motor.left").setPosition(target)
 robot.getDevice("motor.right").setPosition(target)
 
-while robot.step(timestep) != -1:
-    pass
+# This is the most simple controller that works for this benchmark
+# If you want to experiment with more complex functions, you can read the programming guide here:
+#  https://www.cyberbotics.com/doc/guide/controller-programming?tab-language=python
+# or the Robot() documentation here:
+#  https://cyberbotics.com/doc/reference/robot?tab-language=python

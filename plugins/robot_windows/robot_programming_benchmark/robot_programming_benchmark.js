@@ -1,22 +1,40 @@
 import RobotWindow from 'https://cyberbotics.com/wwi/R2022b/RobotWindow.js';
-//import Benchmark from 'https://cyberbotics.com/wwi/testingR2022b/Benchmark.js';
-/* global sendBenchmarkRecord, showBenchmarkRecord, showBenchmarkError */
 
 window.robotWindow = new RobotWindow();
 const benchmarkName = 'Robot Programming';
 let benchmarkPerformance = 0;
 
+const modal = document.querySelector(".modal");
+const closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick); 
+
 window.robotWindow.receive = function(message, robot) {
   if (message.startsWith('percent:'))
     document.getElementById('achievement').innerHTML = metricToString(parseFloat(message.substr(8)));
   else if (message.startsWith('success:')) {
-    const newMessage = message.replace('success', 'confirm');
-    this.send(newMessage)
-    /* benchmarkPerformance = message.split(':')[2]
+    let benchmarkPerformance = message.split(':')[2]
     const benchmarkPerformanceString = metricToString(benchmarkPerformance);
     document.getElementById('achievement').innerHTML = benchmarkPerformanceString;
     document.getElementById('achievement').style.color = 'green';
-    showBenchmarkPerformance(this, benchmarkName, benchmarkPerformance, benchmarkPerformanceString); */
+    document.querySelector(".text").innerHTML = `
+      <h2>${benchmarkName} complete</h2>
+      <h3>Congratulations you finished the benchmark!</h3>
+      <p>Your current performance is: ${benchmarkPerformanceString}.</p>
+      <p>If you want to submit your controller to the leaderboard, follow the instructions given by the "Register" button on the benchmark page.</p>
+    `
+    toggleModal()
   } else
     console.log("Received unknown message for robot '" + robot + "': '" + message + "'");
 
@@ -24,14 +42,3 @@ window.robotWindow.receive = function(message, robot) {
     return (metric * 100).toFixed(2) + '%';
   }
 };
-
-function showBenchmarkPerformance(robotWindow, benchmarkName, benchmarkPerformance, benchmarkPerformanceString) {
-  robotWindow.send('success:' + benchmarkName + ':' + benchmarkPerformance + ':' + benchmarkPerformanceString);
-  /* console.log('Testing...');
-  document.getElementById('connect-button').style.color('violet');
-  console.log('Creating Benchmark instance.');
-  const benchmark = new Benchmark();
-  benchmark.printMessage('Test message.');
-  benchmark.printParentUrl(); */
-  return true;
-}
